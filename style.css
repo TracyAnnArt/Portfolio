@@ -249,14 +249,14 @@ body.scrolled .side a {
     margin: 0;
     font-size: 18px;
     line-height: 22px;
-    color: #fff;
+    color: #615e5e;
     font-family: 'Lato', sans-serif;
 }
 
 .logo--content p {
     font-size: 14px;
     line-height: 18px;
-    color: #fff;
+    color: #615e5e;
 }
 
 /* 1.2. SECTION TITLE */
@@ -2373,4 +2373,80 @@ body.scrolled #backToTop {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08), 0 3px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
+#thumbnail {
+    width: 300px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #thumbnail:hover {
+    opacity: 0.8;
+  }
+  
+  .modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    animation-name: zoom;
+    animation-duration: 0.3s;
+  }
+  
+  @keyframes zoom {
+    from {transform: scale(0.7)}
+    to {transform: scale(1)}
+  }
+  
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .close:hover {
+    color: #bbb;
+  }
 
+  /* Zoom toggle class */
+.zoomed {
+    transform: scale(1.8);
+    cursor: zoom-out;
+  }
+  
+  /* When not zoomed */
+  .modal-content {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+  
+  .video-section {
+    padding: 2rem;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video-player {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
