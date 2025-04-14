@@ -125,7 +125,7 @@ body {
 }
 
 #headerNav a{ 
-    color: #fff;
+    color: #f73606;
 }
 
 body.scrolled #headerNav a {
@@ -711,7 +711,7 @@ body.scrolled .side a {
 }
 
 body.scrolled .header--navbar {
-    background-color: #fff;
+    background-color: #f73606;
     padding-top: 10px;
     box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
@@ -786,7 +786,7 @@ body.scrolled .header--navbar .navbar-toggle .icon-bar {
     bottom: 8px;
     width: 0;
     height: 2px;
-    background-color: #fff;
+    background-color: #f73606;
     -webkit-transition: width .25s ease-in-out;
             transition: width .25s ease-in-out;
 }
@@ -2172,7 +2172,7 @@ body.scrolled #backToTop {
     .header--nav {
         float: none;
         max-height: 320px;
-        background-color: #fff;
+        background-color: #f73606;
         overflow: auto !important;
     }
     .header--nav.collapse {
