@@ -116,16 +116,16 @@ body {
 }
 
 #logo--content p{
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 400;
 }
 
 #headerNav{ 
-    font-size: 11px !important;
+    font-size: 16px !important;
 }
 
-#headerNav a{ 
-    color: #f73606;
+#headerNav a{
+    color: #303030;
 }
 
 body.scrolled #headerNav a {
@@ -247,16 +247,16 @@ body.scrolled .side a {
 
 .logo--content h1 {
     margin: 0;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 22px;
-    color: #f73606;
+    color: #303030;
     font-family: 'Lato', sans-serif;
 }
 
 .logo--content p {
     font-size: 14px;
     line-height: 18px;
-    color: #f73606;
+    color: #303030;
 }
 
 /* 1.2. SECTION TITLE */
@@ -569,8 +569,9 @@ body.scrolled .side a {
 
 
 .modal-body h5{
-    margin-top: 20px;
-    font-weight: 300;
+    margin-top: 5px;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .modal-body h3{
@@ -711,7 +712,7 @@ body.scrolled .side a {
 }
 
 body.scrolled .header--navbar {
-    background-color: #f73606;
+    background-color: #fff;
     padding-top: 10px;
     box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
@@ -744,7 +745,7 @@ body.scrolled .logo--content p {
 }
 
 .header--navbar .navbar-toggle .icon-bar {
-    background-color: #fff;
+    background-color: #303030;
 }
 
 body.scrolled .header--navbar .navbar-toggle .icon-bar {
@@ -769,7 +770,7 @@ body.scrolled .header--navbar .navbar-toggle .icon-bar {
 .header--nav .nav li a {
     position: relative;
     padding: 15px 0 10px;
-    color: #303030;
+    color: #f73606;
     outline: 0;
 }
 
@@ -786,14 +787,14 @@ body.scrolled .header--navbar .navbar-toggle .icon-bar {
     bottom: 8px;
     width: 0;
     height: 2px;
-    background-color: #f73606;
+    background-color: #fff;
     -webkit-transition: width .25s ease-in-out;
             transition: width .25s ease-in-out;
 }
 
 
 body.scrolled .header--nav .nav li a:before {
-    background-color: #303030;
+    background-color: #f73606;
 }
 
 .header--nav .nav li a:hover:before,
@@ -2172,7 +2173,7 @@ body.scrolled #backToTop {
     .header--nav {
         float: none;
         max-height: 320px;
-        background-color: #f73606;
+        background-color: #fff;
         overflow: auto !important;
     }
     .header--nav.collapse {

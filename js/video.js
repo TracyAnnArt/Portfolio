@@ -1,20 +1,14 @@
-const video = document.getElementById('scrollVideo');
+const videos = document.querySelectorAll('.clickable-video');
 
-// Use Intersection Observer to autoplay when visible
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
-  },
-  {
-    threshold: 0.5, // video must be at least 50% visible
-  }
-);
+videos.forEach(video => {
+  // Prevent autoplay on load
+  video.pause();
 
-// Start observing the video
-observer.observe(video);
+  video.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+});
