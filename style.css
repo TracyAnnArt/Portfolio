@@ -251,6 +251,7 @@ body.scrolled .side a {
     line-height: 22px;
     color: #303030;
     font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
 
 .logo--content p {
@@ -709,6 +710,8 @@ body.scrolled .side a {
     -webkit-transition: .25s;
     transition: .25s;
     z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 
 body.scrolled .header--navbar {
