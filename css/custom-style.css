@@ -12,9 +12,9 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
 
 /* Responsive image for desktop and mobile */
 .responsive-img {
-    width: 120%;
-    height: auto;
-    max-height: 60vh;
+    width: auto;
+    height: 200%;
+    max-width: 70vh;
     object-fit: cover;
 }
 
