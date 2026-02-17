@@ -18,6 +18,37 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
     object-fit: cover;
 }
 
+/* Services section spacing and alignment for mobile */
+      #services .row.row-eq-height {
+        flex-direction: column !important;
+        display: flex !important;
+        gap: 32px !important;
+        align-items: stretch !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      #services .service--item {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 24px 0 0 0 !important;
+        text-align: left !important;
+      }
+      #services .service--content h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 10px !important;
+        margin-top: 0 !important;
+      }
+      #services .service--content p {
+        font-size: 1.5rem !important;
+        line-height: 1.7 !important;
+        margin-bottom: 0 !important;
+      }
+      #services {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+      }
+
 /* Gallery Items Equal Height */
 /*
 .gallery-item {
@@ -38,3 +69,63 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
     justify-content: center;
 }
     */
+
+    @media (max-width: 767px) {
+      .media {
+        flex-direction: column !important;
+        padding: 0 18px !important;
+        align-items: center !important;
+      }
+      .media-left {
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 24px !important;
+      }
+      .media-object.responsive-img {
+        width: 95vw !important;
+        max-width: 400px !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+      }
+      .media-body {
+        padding-left: 0 !important;
+        max-width: 100% !important;
+        text-align: left;
+        padding-right: 0 !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        background: none;
+      }
+      .media-heading {
+        font-size: 2rem !important;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        padding-left: 0 !important;
+      }
+      .media-body p, .media-body h5, .media-body b {
+        font-size: 1.5rem !important;
+        line-height: 1.7;
+        margin-bottom: 12px !important;
+      }
+      .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .btn--primary {
+        width: 100% !important;
+        font-size: 1.5rem !important;
+        padding: 18px 0 !important;
+        margin-top: 28px !important;
+        border-radius: 0 !important;
+        letter-spacing: 1px;
+      }
+      .spacer {
+        height: 5px !important;
+      }
+      [data-cat] {
+        padding: 32px 0 !important;
+        margin-bottom: 18px !important;
+      }
+}
