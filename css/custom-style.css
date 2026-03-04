@@ -1,14 +1,54 @@
-/*
+/* Keep VIEW PROJECT button at the bottom of each media-body */
+.media-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px; /* Adjust as needed for your card height */
+}
+.media-body .row:last-of-type {
+  margin-top: auto;
+}
 
+/* Spacer for vertical spacing only if needed, otherwise set to 0 */
+.spacer {
+  margin-top: 0;
+  height: 0;
+}
+/* Sunflower Sweets section: first paragraph */
+[data-cat~="logo-item"] .media-body > p:first-of-type {
+  font-size: 1.25em;
+  line-height: 1.7;
+}
+/* Sunflower Sweets section: h5 and p within .row */
+[data-cat~="logo-item"] .media-body .row h5 {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+[data-cat~="logo-item"] .media-body .row p {
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+/* BrewBlitz section: h5 and p within .row */
+[data-cat~="application-item"][data-cat~="research-item"] .media-body .row h5 {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+[data-cat~="application-item"][data-cat~="research-item"] .media-body .row p {
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+/* BrewBlitz section paragraph size */
+[data-cat~="application-item"][data-cat~="research-item"] .media-body > p:first-of-type {
+  font-size: 1.25em;
+  line-height: 1.7;
+}
+
+/*
 NOTE:
 WRITE YOUR OWN CUSTOM CSS STYLES HERE.
 
 */
 
-/* Spacer for vertical spacing instead of <br> tags */
-.spacer {
-    margin-top: 10vh; /* Adjust as needed */
-}
+/* (Removed duplicate .spacer rule above; see unified rule at top) */
 
 /* Responsive image for desktop and mobile */
 .responsive-img {
@@ -19,35 +59,35 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
 }
 
 /* Services section spacing and alignment for mobile */
-      #services .row.row-eq-height {
-        flex-direction: column !important;
-        display: flex !important;
-        gap: 32px !important;
-        align-items: stretch !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-      #services .service--item {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-bottom: 0 !important;
-        padding: 24px 0 0 0 !important;
-        text-align: left !important;
-      }
-      #services .service--content h2 {
-        font-size: 1.5rem !important;
-        margin-bottom: 10px !important;
-        margin-top: 0 !important;
-      }
-      #services .service--content p {
-        font-size: 1.5rem !important;
-        line-height: 1.7 !important;
-        margin-bottom: 0 !important;
-      }
-      #services {
-        padding-left: 18px !important;
-        padding-right: 18px !important;
-      }
+#services .row.row-eq-height {
+  flex-direction: column !important;
+  display: flex !important;
+  gap: 32px !important;
+  align-items: stretch !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+#services .service--item {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 24px 0 0 0 !important;
+  text-align: left !important;
+}
+#services .service--content h2 {
+  font-size: 1.5rem !important;
+  margin-bottom: 10px !important;
+  margin-top: 0 !important;
+}
+#services .service--content p {
+  font-size: 1.5rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 0 !important;
+}
+#services {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
 
 /* Gallery Items Equal Height */
 /*
