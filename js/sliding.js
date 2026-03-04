@@ -19,8 +19,30 @@
         var link = document.getElementById(linkId);
         var prev = document.getElementById(prevId);
         var next = document.getElementById(nextId);
+
+        // Null checks for all required elements
+        if (!img || !link || !prev || !next) {
+            console.error('Slider setup: One or more elements not found:', {img, link, prev, next, imagesId});
+            return;
+        }
+
         function update() {
-            if (!images.length) return;
+            if (!images.length) {
+                img.alt = 'No images found for slider.';
+                link.style.display = 'none';
+                prev.style.display = 'none';
+                next.style.display = 'none';
+                // Show a visible error message for debugging
+                if (img.parentNode) {
+                    var msg = document.createElement('div');
+                    msg.style.color = 'red';
+                    msg.style.fontWeight = 'bold';
+                    msg.textContent = 'No images found for slider!';
+                    img.parentNode.appendChild(msg);
+                }
+                console.log('Slider setup: No images found for', imagesId);
+                return;
+            }
             img.src = images[idx].src;
             img.alt = images[idx].alt;
             link.href = images[idx].link;
@@ -36,7 +58,10 @@
         update();
     }
 
-    // Slider 1
+// Wait for DOM to be fully loaded before initializing sliders
+document.addEventListener('DOMContentLoaded', function() {
     setupSlider('slider-img-1', 'slider-link-1', 'slider-prev-1', 'slider-next-1', 'slider-images-1');
-    // Slider 2
     setupSlider('slider-img-2', 'slider-link-2', 'slider-prev-2', 'slider-next-2', 'slider-images-2');
+    setupSlider('slider-img-3', 'slider-link-3', 'slider-prev-3', 'slider-next-3', 'slider-images-3');
+    setupSlider('slider-img-4', 'slider-link-4', 'slider-prev-4', 'slider-next-4', 'slider-images-4');
+});
