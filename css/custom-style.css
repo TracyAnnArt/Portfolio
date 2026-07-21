@@ -13,34 +13,6 @@
   margin-top: 0;
   height: 0;
 }
-/* Sunflower Sweets section: first paragraph */
-[data-cat~="logo-item"] .media-body > p:first-of-type {
-  font-size: 1.25em;
-  line-height: 1.7;
-}
-/* Sunflower Sweets section: h5 and p within .row */
-[data-cat~="logo-item"] .media-body .row h5 {
-  font-size: 1.25em;
-  font-weight: 700;
-}
-[data-cat~="logo-item"] .media-body .row p {
-  font-size: 1.25em;
-  line-height: 1.6;
-}
-/* BrewBlitz section: h5 and p within .row */
-[data-cat~="application-item"][data-cat~="research-item"] .media-body .row h5 {
-  font-size: 1.25em;
-  font-weight: 700;
-}
-[data-cat~="application-item"][data-cat~="research-item"] .media-body .row p {
-  font-size: 1.25em;
-  line-height: 1.6;
-}
-/* BrewBlitz section paragraph size */
-[data-cat~="application-item"][data-cat~="research-item"] .media-body > p:first-of-type {
-  font-size: 1.25em;
-  line-height: 1.7;
-}
 
 /*
 NOTE:
@@ -56,6 +28,223 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
     height: 200%;
     max-width: 70vh;
     object-fit: cover;
+}
+
+.media-body p.project-type {
+  margin: 10px 0 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.55);
+  opacity: 0.85;
+}
+
+.project-type span {
+  display: inline-block;
+  margin-right: 0.65rem;
+}
+
+.banner--item {
+  background-size: cover;
+  background-position: center center;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.banner--item.bg--overlay:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20,20,20,0.42);
+  pointer-events: none;
+}
+
+.banner--item > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner--content {
+  text-shadow: 0 10px 30px rgba(0,0,0,0.22);
+}
+
+.banner--content h2 {
+  font-size: 3rem;
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+.banner--content p {
+  margin-top: 1.4rem;
+  color: rgba(255,255,255,0.92);
+  font-size: 1.8rem;
+  line-height: 1.9;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section--title {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.section--title h2 {
+  font-size: 2.8rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.gallery-filter-menu {
+  margin-bottom: 40px;
+}
+
+.gallery-filter-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.gallery-filter-menu li {
+  margin: 0;
+}
+
+.gallery-filter-menu a {
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.92);
+  color: #333;
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.gallery-filter-menu a:hover,
+.gallery-filter-menu li.active a {
+  transform: translateY(-1px);
+  background: #303030;
+  color: #fff;
+  border-color: transparent;
+}
+
+.btn--primary {
+  border-radius: 999px;
+  padding: 14px 28px;
+  background: #303030;
+  color: #fff;
+  border-color: transparent;
+}
+
+.btn--primary:hover {
+  background: #0f0f0f;
+}
+
+[data-cat] {
+  margin-bottom: 36px;
+  padding: 48px 0;
+}
+
+.media {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  width: 1270px !important;
+  max-width: 1270px !important;
+  margin: 0 auto !important;
+  padding: 0 45px 0 0 !important;
+  box-sizing: border-box;
+}
+
+.media-left {
+  width: 100%;
+  max-width: 580px;
+  flex: 0 0 580px;
+}
+
+.media-left a {
+  display: block;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 32px 70px rgba(21,21,21,0.08);
+}
+
+.media-object.responsive-img {
+  width: 100%;
+  height: auto;
+  max-height: 760px;
+  display: block;
+}
+
+.media-body {
+  flex: 1;
+  max-width: calc(100% - 620px - 45px);
+  padding-left: 3rem;
+}
+
+.media-heading {
+    font-size: 2.4rem !important;
+    margin-bottom: 0.35rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+  }
+
+  .media-body p {
+    color: rgba(0,0,0,0.88);
+    line-height: 1.9;
+    margin-bottom: 28px;
+    font-size: 16px !important;
+    max-width: 680px;
+  }
+
+  .media-body p.project-type {
+    margin: 10px 0 18px;
+    font-size: 12px !important;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.55);
+    opacity: 0.85;
+  }
+
+  .media-body h5 {
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    margin-bottom: 0.45rem !important;
+    letter-spacing: -0.01em !important;
+    margin-top: 0 !important;
+  }
+
+@media (max-width: 991px) {
+  .media {
+    flex-direction: column;
+    padding: 0 18px !important;
+  }
+  .media-left {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 26px;
+  }
+  .media-body {
+    max-width: 100%;
+    padding-left: 0;
+  }
+  .media-body p {
+    font-size: 1.15rem !important;
+  }
+  .media-heading {
+    font-size: 2.2rem;
+  }
+  .gallery-filter-menu a {
+    width: auto;
+  }
 }
 
 /* Services section spacing and alignment for mobile */
@@ -144,10 +333,22 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
         margin-bottom: 16px;
         padding-left: 0 !important;
       }
-      .media-body p, .media-body h5, .media-body b {
-        font-size: 1.5rem !important;
+      .media-body p {
+        font-size: 15px !important;
         line-height: 1.7;
         margin-bottom: 12px !important;
+      }
+      .media-body h5 {
+        font-size: 18px !important;
+        font-weight: 800 !important;
+        line-height: 1.3;
+        margin-bottom: 10px !important;
+      }
+      .media-body b {
+        font-weight: 800 !important;
+      }
+      .media-body p.project-type {
+        font-size: 12px !important;
       }
       .row {
         margin-left: 0 !important;
