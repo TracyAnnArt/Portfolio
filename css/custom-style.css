@@ -370,3 +370,126 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
         margin-bottom: 18px !important;
       }
 }
+
+/* ============================================================
+   MOBILE RESPONSIVE FIX
+   Paste this at the very BOTTOM of css/custom-style.css
+   ============================================================ */
+
+/* Safety net: stop any element from causing horizontal scroll */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* THE MAIN BUG: .media was locked to a fixed 1270px width with
+   !important, so it never shrunk on phones. Making the width
+   fluid (100%) while keeping max-width as the desktop cap fixes
+   the overflow/zoomed-out look on mobile. */
+.media {
+  width: 100% !important;
+}
+
+/* Banner text was not scaled down for phones */
+@media (max-width: 767px) {
+  .banner--item {
+    min-height: 380px !important;
+  }
+  .banner--content h2 {
+    font-size: 1.8rem !important;
+    line-height: 1.25 !important;
+  }
+  .banner--content p {
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+    margin-top: 1rem !important;
+    padding: 0 10px;
+  }
+}
+
+/* Fix the inline margin-left:200px on the first service item,
+   which pushed content off-screen on small phones */
+@media (max-width: 767px) {
+  #services .service--item {
+    margin-left: 0 !important;
+  }
+}
+
+/* Extra-small phones (iPhone SE etc.) */
+@media (max-width: 400px) {
+  .media-heading {
+    font-size: 1.6rem !important;
+  }
+  .section--title h2 {
+    font-size: 2rem !important;
+  }
+  .gallery-filter-menu a {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ============================================================
+   WHITE BACKGROUND FIX — About me & Design Portfolio sections
+   Paste this at the very BOTTOM of css/custom-style.css
+   (after the mobile-responsive-fix block, if you added it)
+   ============================================================ */
+
+/* The banner's parallax background image is fixed behind the
+   page, and #gallery / #about never had an opaque background of
+   their own — so the sunset photo shows through as you scroll.
+   Giving them a solid white background blocks it. */
+
+#gallery {
+  background-color: #ffffff !important;
+  position: relative;
+  z-index: 1;
+}
+
+#about {
+  background-color: #ffffff !important;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ============================================================
+   "EXPERT IN" PROGRESS BAR SPACING FIX
+   Paste this at the very BOTTOM of css/custom-style.css
+   ============================================================ */
+
+/* The % label sits 20px above the bar (top: -20px), but the
+   heading above it didn't leave enough room, so the label
+   overlapped the skill name text. Adding proper spacing above
+   and below each bar fixes it. */
+
+.about--progress-items h4 {
+  margin-top: 28px !important;
+  margin-bottom: 8px !important;
+}
+
+/* No extra gap needed before the very first skill (UX & UI Design) */
+.about--progress-items h4:first-of-type {
+  margin-top: 0 !important;
+}
+
+.about--progress-items .progress {
+  margin-top: 22px !important;
+  margin-bottom: 10px !important;
+  overflow: visible !important;
+}
+
+.about--progress-items .progress-bar span {
+  top: -20px !important;
+  right: 0 !important;
+  font-weight: 600;
+}
