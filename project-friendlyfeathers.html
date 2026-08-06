@@ -61,10 +61,11 @@
         <!-- Side Nav Start -->
                         <div class="side" id="side">
                             <ul>
-                                <li><a href="#ra1">Visual Identity</a></li>
-                                <li><a href="#ra2">UX Research</a></li>
-                                <li><a href="#ra3">Low Fidelity</a></li>
-                                <li><a href="#ra4">UI Design</a></li>
+                                <li><a href="#ra1">Problem</a></li>
+                                <li><a href="#ra2">Research</a></li>
+                                <li><a href="#ra3">Solution (UI Design)</a></li>
+                                <li><a href="#ra4">Identity</a></li>
+                                <li><a href="#ra5">Next Steps</a></li>
 
                             </ul>
                         </div>
@@ -124,7 +125,8 @@
                         <!-- <div class="col-md-offset-1 col-md-10 col-xs-offset-1 col-xs-10 reset-padding post-title"> -->
                         <div class="col-md-12 col-xs-12 col-xs-offset-1 reset-padding post-title">
                             <h2>FriendlyFeathers Application</h2>
-                            <h4>Generic social networks and pet apps focus on dogs and cats, the avian community suffers from a Specialized Knowledge Gap. FriendlyFeathers centralizes verified avian medical resources, adoption and community engagement into a single, trusted ecosystem designed to lower the barrier to expert bird care.
+                            <h4>Generic pet apps focus on dogs and cats causing the avian community to suffer from a specialized knowledge gap. FriendlyFeathers centralizes verified avian medical resources, adoption and community engagement into a single, trusted ecosystem designed to lower the barrier to expert bird care.
+
 
                             </h4>
                         </div>
@@ -138,12 +140,17 @@
                     <div class="row">
                         <div class="col-md-8">
 
-                            <h5>Overview</h5>
-                            <p>FriendlyFeathers is a comprehensive ecosystem designed to solve the fragmentation in bird ownership. While dogs and cats have endless resources, bird owners struggle to find specialized medical care and verified information. I designed a dual purpose platform that merges High Stakes Utility (Vet Finder & Adoption) with Community Engagement (The Birddex & Social Feed).</p> 
+                            <h5 id="ra1">Overview</h5>
+                            <p>I led FriendlyFeathers end to end as a solo UX/UI designer; from market research and persona development through information architecture, wireframing and high fidelity UI. The platform merges high stakes utility (vet finder, adoption) with lower stakes community engagement (Birddex, social feed) into one trusted ecosystem.
+</p> 
 
                             <h5>The Problem</h5>
                             <p>Bird owners often rely on unverified social media groups for life saving medical advice because specialized apps don't exist.</p>
         
+                            <h5>Outcomes</h5>
+                            <p>Centralized trust: one verified source replacing fragmented social media advice<br>
+                            Full lifecycle ecosystem: vet care, adoption, and community in a single app<br>
+                            Built bird first, not adapted from a general pet platform</p>
                         </div>
 
                         <div class="col-md-1"></div>                     
@@ -178,16 +185,10 @@
                     <div class="dot3"></div>
                 </div>                            
 
-                <h3>Identifying the Market Gap</h3>
+                <h3 id="ra2">Identifying the Market Gap</h3>
 
                 <p><b>The Fragmented Experience:</b></p>
-                <p>Bird owners currently rely on generalized platforms for critical care advice. These spaces are broad, unverified and not designed for species specific health needs. Life saving medical guidance is buried between memes and misinformation.</p>
-                <p><b>The Expertise Void:</b></p>
-                <p>Unlike dogs and cats, birds lack a centralized digital ecosystem. There is no dedicated platform that connects bird owners directly to certified avian veterinarians, ethical rescues and structured educational resources in one cohesive environment.</p>
-                <p><b>The Trust Gap:</b></p>
-                <p>Specialized apps do not exist, bird owners default to peer advice over professional guidance. This creates risk during medical emergencies and delays access to proper care.</p>
-                <p><b>The Adoption Disconnect:</b></p>
-                <p>Bird adoption and rehoming processes are scattered across local classifieds and informal groups, with little transparency, vetting, or support for responsible ownership.</p>
+                <p>To validate the market gap, I researched how bird owners currently navigate care, adoption and community then mapped the landscape against existing platforms.</p>
                 
 
                 
@@ -253,7 +254,108 @@
                     <div class="dot3"></div>
                 </div>                            
 
-                            <h3 id="ra1">Identity</h3>
+
+                      <h3 id="ra3">UI Design</h3>                        
+                            <p>FriendlyFeathers connects bird enthusiasts with a wide array of features that enhance their experience, from finding avian vets to adopting feathered friends and joining a vibrant community of bird lovers.</p>
+
+
+                    <div style="padding:40% 0 0 0;position:relative;">
+                        <section class="video-section" >
+                            <video
+                              class="clickable-video"
+                              muted
+                              playsinline
+                              preload="metadata"
+                              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                            >
+   
+                              <source src="img/FriendlyFeathers/FriendlyFeathers.mp4" type="video/mp4">
+                              Your browser does not support the video tag.
+                            </video>
+                        </section>
+                    </div>
+
+                            <h3>Trusted Avian Care</h3>
+                            <h5>Avian Vet Finder / Appointment Scheduling</h5>
+                            <p>Search for avian vets near you, view their services and availability, and easily book an appointment through the app to ensure your bird’s health and well-being.</p>
+
+
+                        <img class="modal-trigger" src="img/FriendlyFeathers/New Slides 3_2_2026/25.png" alt="" class="img-responsive" style="width:100%;">
+                         
+                        <!-- Modal -->
+                         <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                            <div id="caption"></div>
+                        </div>
+
+
+                            <h3>Comprehensive Bird Database</h3>
+                            <h5>Bird Information / Species Guide</h5>
+                            <p>Explore detailed profiles of various bird species, learn about their care needs, and access valuable information to help you better understand and care for your feathered friend.</p>
+
+                        <img class="modal-trigger" src="img/Updated_flows/Add a bird to _My Birddex_ flow.svg" alt="" class="img-responsive" style="width:100%;" >
+
+                         <!-- Modal -->
+                         <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                            <div id="caption"></div>
+                        </div>
+
+                            <h3>Bird Adoption Made Easy</h3>
+                            <h5>Adoption Listings / Direct Connections</h5>
+                            <p>Browse a variety of birds available for adoption, view their profiles, and connect directly with shelters or current owners to offer a loving home to a feathered friend.</p>
+
+
+                        <img class="modal-trigger" src="img/FriendlyFeathers/New Slides 3_2_2026/22.png" alt="" class="img-responsive" style="width:100%;"> 
+
+                         <!-- Modal -->
+                         <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                            <div id="caption"></div>
+                        </div>
+
+                            <h3>Bird Enthusiast Connections</h3>
+                            <h5>Social Sharing / Community Engagement</h5>
+                            <p>Share bird updates, photos, and experiences with the community, connect with fellow bird lovers, and access expert advice from avian professionals to enrich your bird ownership journey.</p>
+
+
+
+                        <img class="modal-trigger" src="img/FriendlyFeathers/New Slides 3_2_2026/28.png" alt="" class="img-responsive" style="width:100%;">
+
+                         <!-- Modal -->
+                         <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                            <div id="caption"></div>
+                        </div>
+
+
+                        <img class="modal-trigger" src="img/FriendlyFeathers/FriendlyFeathersCase/sSlide23.PNG" alt="" class="img-responsive" style="width:100%;">
+
+                         <!-- Modal -->
+                         <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                            <div id="caption"></div>
+                        </div>
+
+
+                        <img class="modal-trigger" src="img/FriendlyFeathers/New Slides 3_2_2026/29.png" alt="" class="img-responsive" style="width:100%;">
+
+                         <!-- Modal -->
+                         <div id="imageModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                            <div id="caption"></div>
+                        </div>
+
+
+
+
+                            <h3 id="ra4">Identity</h3>
                             <h5>Voice / Color Palette / Font Style / Components</h5>
                             <p>I developed the FriendlyFeathers identity to balance warmth with credibility. Soft, approachable visuals and breathable layouts create a sense of safety and compassion, while structured typography and clean UI patterns reinforce trust and authority.
 Social features are intentionally designed to feel curated and purposeful, supporting meaningful connection without overwhelming the experience. The result is a focused ecosystem where community and expert guidance coexist seamlessly.</p>
@@ -317,105 +419,13 @@ Social features are intentionally designed to feel curated and purposeful, suppo
 
 
 
-                            <h3 id="ra4">UI Design</h3>                        
-                            <p>FriendlyFeathers connects bird enthusiasts with a wide array of features that enhance their experience, from finding avian vets to adopting feathered friends and joining a vibrant community of bird lovers.</p>
+      
 
+<h3 id="ra5">Next Steps</h3>
+                            <p>With 96 screens spanning vet finding, adoption, community and a species database, the hardest part of FriendlyFeathers wasn't any screen; It was making four different tools feel like one product instead of four apps stitched together. I leaned on the persona and competitive research to keep decisions anchored: every feature had to answer a real need Rachel identified. </p>
 
-                    <div style="padding:40% 0 0 0;position:relative;">
-                        <section class="video-section" >
-                            <video
-                              class="clickable-video"
-                              muted
-                              playsinline
-                              preload="metadata"
-                              style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                            >
-   
-                              <source src="img/FriendlyFeathers/FriendlyFeathers.mp4" type="video/mp4">
-                              Your browser does not support the video tag.
-                            </video>
-                        </section>
-                    </div>
-
-                            <h3>Trusted Avian Care</h3>
-                            <h5>Avian Vet Finder / Appointment Scheduling</h5>
-                            <p>Search for avian vets near you, view their services and availability, and easily book an appointment through the app to ensure your bird’s health and well-being.</p>
-
-
-                        <img class="modal-trigger" src="img/FriendlyFeathers/New Slides 3_2_2026/25.png" alt="" class="img-responsive" style="width:100%;">
-                         
-                        <!-- Modal -->
-                         <div id="imageModal" class="modal">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="modalImage">
-                            <div id="caption"></div>
-                        </div>
-
-
-                            <h3>Comprehensive Bird Database</h3>
-                            <h5>Bird Information / Species Guide</h5>
-                            <p>Explore detailed profiles of various bird species, learn about their care needs, and access valuable information to help you better understand and care for your feathered friend.</p>
-
-                        <img class="modal-trigger" src="img/Updated_flows/Add a bird to _My Birddex_ flow.svg" alt="" class="img-responsive" style="width:100%;" >
-
-                         <!-- Modal -->
-                         <div id="imageModal" class="modal">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="modalImage">
-                            <div id="caption"></div>
-                        </div>
-
-                            <h3>Brid Adoption Made Easy</h3>
-                            <h5>Adoption Listings / Direct Connections</h5>
-                            <p>Browse a variety of birds available for adoption, view their profiles, and connect directly with shelters or current owners to offer a loving home to a feathered friend.</p>
-
-
-                        <img class="modal-trigger" src="img/FriendlyFeathers/New Slides 3_2_2026/22.png" alt="" class="img-responsive" style="width:100%;"> 
-
-                         <!-- Modal -->
-                         <div id="imageModal" class="modal">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="modalImage">
-                            <div id="caption"></div>
-                        </div>
-
-                            <h3>Bird Enthusiast Connections</h3>
-                            <h5>Social Sharing / Community Engagement</h5>
-                            <p>Share bird updates, photos, and experiences with the community, connect with fellow bird lovers, and access expert advice from avian professionals to enrich your bird ownership journey.</p>
-
-
-
-                        <img class="modal-trigger" src="img/FriendlyFeathers/New Slides 3_2_2026/28.png" alt="" class="img-responsive" style="width:100%;">
-
-                         <!-- Modal -->
-                         <div id="imageModal" class="modal">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="modalImage">
-                            <div id="caption"></div>
-                        </div>
-
-
-                        <img class="modal-trigger" src="img/FriendlyFeathers/FriendlyFeathersCase/sSlide23.PNG" alt="" class="img-responsive" style="width:100%;">
-
-                         <!-- Modal -->
-                         <div id="imageModal" class="modal">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="modalImage">
-                            <div id="caption"></div>
-                        </div>
-
-
-                        <img class="modal-trigger" src="img/FriendlyFeathers/New Slides 3_2_2026/29.png" alt="" class="img-responsive" style="width:100%;">
-
-                         <!-- Modal -->
-                         <div id="imageModal" class="modal">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="modalImage">
-                            <div id="caption"></div>
-                        </div>
-
-
-
+                            <div>
+                            <p>Moving forward, I'd want to test the information architecture directly with users; specifically, whether they can move between booking a vet appointment and browsing the Birddex without the app feeling disjointed.</P>
 
                         <img class="modal-trigger" src="img/FriendlyFeathers/FriendlyFeathers Update 12-1-2025/Slide24.PNG" alt="" class="img-responsive" style="width:100%;">
 
@@ -528,7 +538,7 @@ Social features are intentionally designed to feel curated and purposeful, suppo
             <div class="container">
                 <!-- Footer Copyright Start -->
                 <div class="footer--copyright" style="font-weight: 300; color: #999999;">
-                    <p>Copyright &copy; 2024 <a href="index.html" style=" color: #999999;">Tracy Ann Jacot</a>. All Rights Reserved.</p>
+                    <p>Copyright &copy; 2026 <a href="index.html" style=" color: #999999;">Tracy Ann Jacot</a>. All Rights Reserved.</p>
                 </div>
                 <!-- Footer Copyright End -->
             </div>
