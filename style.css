@@ -115,6 +115,15 @@ body {
     height: 100%;
 }
 
+html {
+    scroll-padding-top: 200px;
+}
+
+h5[id],
+h3[id] {
+    scroll-margin-top: 150px;
+}
+
 #logo--content p{
     font-size: 16px;
     font-weight: 400;
@@ -190,23 +199,23 @@ p:last-child {
 }
 
 .side a{
-    float: right;
-    display: block;
+    display: inline-block;
     color: rgba(0, 0, 0, 0.5);
-    text-align: center;
+    text-align: right;
     margin: .3em 0;
     text-decoration: none;
     font-size: 1em;
     font-weight: 300;
-    -webkit-transition: .25s;
-    transition: .25s;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: color .25s ease, border-color .25s ease;
+    transition: color .25s ease, border-color .25s ease;
     z-index: 1;
 }
 
 .side a:hover{
     color: #2C90FE;
-    font-weight: 400;
-    border-bottom: 1px solid #2C90FE;
+    font-weight: 300;
+    border-bottom-color: #2C90FE;
 }
 
 body.scrolled .side a {
