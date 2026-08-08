@@ -112,8 +112,70 @@ WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SA
         ------------------------------------------- */
         var $headerNav = $('#headerNav');
 
+        var getDocumentScrollTop = function () {
+            return document.body.scrollTop || document.documentElement.scrollTop || $wn.scrollTop();
+        };
+
+        var clearActiveNavState = function () {
+            $headerNav.find('.nav a').removeClass('active');
+        };
+
+        var setActiveNavState = function ($link) {
+            clearActiveNavState();
+
+            if ($link && $link.length) {
+                $link.addClass('active');
+            }
+        };
+
+        clearActiveNavState();
+
         $headerNav.find('.nav').on('click', 'a', function () {
             $headerNav.collapse('hide');
+            setActiveNavState($(this));
+        });
+
+        var updateActiveNavItem = function () {
+            var $navLinks = $headerNav.find('.nav a[href^="#"]');
+            var scrollTop = getDocumentScrollTop();
+
+            if (scrollTop < 180) {
+                clearActiveNavState();
+                return;
+            }
+
+            var activeLink = null;
+            var closestDistance = Infinity;
+
+            $navLinks.each(function () {
+                var href = $(this).attr('href');
+                var $target = $(href);
+
+                if (!$target.length) {
+                    return;
+                }
+
+                var targetTop = $target.offset().top - 120;
+                var distance = Math.abs(targetTop - scrollTop);
+
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    activeLink = this;
+                }
+            });
+
+            clearActiveNavState();
+
+            if (activeLink) {
+                setActiveNavState($(activeLink));
+            }
+        };
+
+        $(window).on('scroll resize load', updateActiveNavItem);
+        $(document).on('click', '#headerNav .nav a[href^="#"]', function () {
+            setTimeout(function () {
+                updateActiveNavItem();
+            }, 120);
         });
         
         /* -------------------------------------------

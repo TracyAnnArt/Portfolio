@@ -1,3 +1,90 @@
+/* Project page consistency: fluid inset and responsive image sizing */
+.project-page .container {
+  width: 100%;
+  max-width: none;
+  padding-left: 15%;
+  padding-right: 15%;
+  box-sizing: border-box;
+}
+
+.project-page .modal-body {
+  padding: 80px 0 40px;
+  margin-top: 0;
+}
+
+.project-page .modal-body .row,
+.project-page .modal-body .post-content,
+.project-page .modal-body .post-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.project-page .modal-body [class*="col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.project-page .modal-body .col-md-offset-1,
+.project-page .modal-body .col-xs-offset-1 {
+  margin-left: 0 !important;
+}
+
+.project-page .modal-body img,
+.project-page .modal-body .img-responsive {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 2rem;
+  padding: 0;
+}
+
+.project-page .project-logo {
+  width: clamp(30rem, 15vw, 13rem) !important;
+  max-width: 40rem !important;
+  height: auto;
+  margin: 0 auto 1.5rem 0 !important;
+  display: block;
+}
+
+.project-page .logo--img img,
+.project-page .navbar-brand .logo--img img,
+.header--navbar .logo--img img,
+.header--navbar .logo--img img.img-responsive {
+  width: 50px !important;
+  max-width: 50px !important;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.project-page .modal-body img[style*="width: 83.5%"],
+.project-page .modal-body img[style*="width:83.5%"],
+.project-page .modal-body img[style*="width:20%"],
+.project-page .modal-body img[style*="width:20%;"],
+.project-page .modal-body img[style*="width: 20%"],
+.project-page .modal-body img[style*="width: 100%;"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto 2rem !important;
+}
+
+.project-page .modal-body .post-content {
+  width: 100%;
+}
+
+.project-page .modal-body .post-content .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.project-page .modal-body .post-content .row > [class*="col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* Keep VIEW PROJECT button at the bottom of each media-body */
 .media-body {
   display: flex;
@@ -146,7 +233,18 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
 
 [data-cat] {
   margin-bottom: 36px;
-  padding: 48px 0;
+  padding: clamp(2rem, 4vw, 4rem) 10% !important;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.project-showcase {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  left: auto;
+  right: auto;
+  box-sizing: border-box;
 }
 
 .media {
@@ -154,18 +252,32 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 32px;
-  width: 1270px !important;
-  max-width: 1270px !important;
-  margin: 0 auto !important;
-  padding: 0 45px 0 0 !important;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
   box-sizing: border-box;
 }
 
-.media-left {
+.project-showcase .media-left,
+.project-showcase .media-body {
+  flex: 1 1 45%;
+  max-width: 45%;
+  min-width: 0;
+}
+
+.project-showcase .media-left {
   width: 100%;
-  max-width: 580px;
-  flex: 0 0 580px;
+}
+
+.project-showcase .media-body {
+  padding-left: clamp(1rem, 2vw, 3rem);
+}
+
+[data-cat] .media {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .media-left a {
@@ -183,9 +295,9 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
 }
 
 .media-body {
-  flex: 1;
-  max-width: calc(100% - 620px - 45px);
-  padding-left: 3rem;
+  flex: 1 1 50%;
+  max-width: 100%;
+  padding-left: clamp(1rem, 2vw, 3rem);
 }
 
 .media-heading {

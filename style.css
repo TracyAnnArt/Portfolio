@@ -250,7 +250,10 @@ body.scrolled .side a {
 }
 
 .logo--img img {
-    width: 50px;
+    width: 50px !important;
+    max-width: 50px !important;
+    min-width: 50px !important;
+    height: auto;
     border-radius: 50%;
 }
 
@@ -743,6 +746,13 @@ body.scrolled .logo--content p {
     color: #303030;
 }
 
+.header--navbar .container.nav-shell {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
 .header--navbar .navbar {
     min-height: 0;
     margin-bottom: 0;
@@ -782,12 +792,12 @@ body.scrolled .header--navbar .navbar-toggle .icon-bar {
 }
 
 .header--nav .nav li {
-    padding: 0 15px;
+    padding: 0 clamp(0.75rem, 1.6vw, 1.5rem);
 }
 
 .header--nav .nav li a {
     position: relative;
-    padding: 15px 0 10px;
+    padding: clamp(0.75rem, 1.1vw, 1rem) 0 clamp(0.5rem, 0.8vw, 0.75rem);
     color: #f73606;
     outline: 0;
 }
@@ -806,7 +816,7 @@ body.scrolled .header--navbar .navbar-toggle .icon-bar {
     bottom: 8px;
     width: 0;
     height: 2px;
-    background-color: #fff;
+    background-color: #f73606;
     -webkit-transition: width .25s ease-in-out;
             transition: width .25s ease-in-out;
 }
@@ -817,8 +827,13 @@ body.scrolled .header--nav .nav li a:before {
 }
 
 .header--nav .nav li a:hover:before,
-.header--nav .nav li.active a:before {
+.header--nav .nav li.active a:before,
+.header--nav .nav li a.active:before {
     width: 100%;
+}
+
+.header--nav .nav li a.active {
+    color: #f73606;
 }
 
 /* 2.5. HEADER CUSTOM BUTTON */
@@ -956,6 +971,29 @@ body.scrolled .header--nav .nav li a:before {
 \*------------------------------------*/
 #about {
     padding: 80px 0;
+}
+
+#about .container.about-section-shell {
+    width: 100%;
+    max-width: none;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+#about .about-modal-body {
+    padding: 0;
+    margin-top: 0;
+}
+
+#about .about-layout {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#about .about-layout > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #about h3 {

@@ -52,7 +52,7 @@
     </script>
 
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="100">
+<body>
     <!-- Wrapper Start -->
     <div class="wrapper">
         <!-- Preloader Start -->
@@ -67,7 +67,7 @@
         <!-- 2 Area Start -->
         <div id="header">
             <nav class="header--navbar">
-                <div class="container" style="padding-right: 30px; padding-left: 30px;">
+                <div class="container nav-shell">
                     <div class="navbar">
                         <div class="navbar-header">
                         
@@ -96,7 +96,8 @@
                             <ul class="nav navbar-nav navbar-right AnimateScroll">
                                 <li><a href="#header">HOME</a></li>
                                 <li><a href="#gallery">WORKS</a></li>
-                                <li><a href="#about">ABOUT</a></li>          
+                                <li><a href="#about">ABOUT</a></li>
+                                <li><a href="https://drive.google.com/file/d/1WT5fHOSd3VhJwFzLC003kslcowwIAXco/view?usp=sharing" target="_blank">RESUME</a></li>
                                 <li><a href="https://www.linkedin.com/in/tracy-ann-jacot-5b7837187/">LINKEDIN</a></li>
                             </ul>
                         </div>
@@ -146,10 +147,10 @@
                 <div class="gallery-filter-menu">
                     <ul>
                         <li class="active"><a href="#" class="btn--default" data-filter="all">ALL</a></li>
-                        <li><a href="#" class="btn--default" data-filter="research-item">RESEARCH</a></li>
                         <li><a href="#" class="btn--default" data-filter="application-item">APPS</a></li>
                         <li><a href="#" class="btn--default" data-filter="website-item">WEBSITES</a></li>
                         <li><a href="#" class="btn--default" data-filter="logo-item">BRAND IDENTITY</a></li>
+                        <li><a href="#" class="btn--default" data-filter="research-item">RESEARCH</a></li>
                     </ul>
                 </div>
             </div>
@@ -159,8 +160,8 @@
                 
                 <div>
 
-                <div data-cat="application-item research-item" style="background-color: #EBD6B5; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 40px 0;">
-                    <div class="media"  style="margin-left: 0; margin-right: 0; padding: 0 100px; display: flex; align-items: flex-start;">
+                <div data-cat="application-item research-item" class="project-showcase" style="background-color: #EBD6B5;">
+                    <div class="media">
                     <div class="media-left">
                         <a href="img/brewblitz/BrewBlitz_cover_photo.png">
                         <img class="media-object responsive-img" src="img/brewblitz/BrewBlitz_cover_photo.png" alt="Description of image">
@@ -203,8 +204,8 @@
                 </div>
 
 
-                <div data-cat="application-item research-item" style="background-color: #FAF8FA; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 40px 0;">
-                    <div class="media"  style="margin-left: 0; margin-right: 0; padding: 0 100px; display: flex; align-items: flex-start;">
+                <div data-cat="application-item research-item" class="project-showcase" style="background-color: #FAF8FA;">
+                    <div class="media">
                     <div class="media-left">
                         <a href="img/FriendlyFeathers/FriendlyFeathersCoverPhoto.png">
                         <img class="media-object responsive-img" src="img/FriendlyFeathers/FriendlyFeathersCoverPhoto.png" alt="Description of image">
@@ -247,8 +248,8 @@
                     </div>
                 </div>
 
-                <div data-cat="logo-item" style="background-color: #EBD6B5; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 40px 0;">
-                    <div class="media"  style="margin-left: 0; margin-right: 0; padding: 0 100px; display: flex; align-items: flex-start;">
+                <div data-cat="logo-item" class="project-showcase" style="background-color: #EBD6B5;">
+                    <div class="media">
                     <div class="media-left">
                         <a href="img/Sunflower_sweets/Sunflower Sweets_Cover_Photo.png" target="_blank">
                         <img class="media-object responsive-img" src="img/Sunflower_sweets/Sunflower Sweets_Cover_Photo.png" alt="Description of image">
@@ -291,8 +292,8 @@
                 </div>
 
 
-                <div data-cat="research-item website-item logo-item" style="background-color: #FAF8FA; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; padding: 40px 0;">
-                    <div class="media"  style="margin-left: 0; margin-right: 0; padding: 0 100px; display: flex; align-items: flex-start;">
+                <div data-cat="research-item website-item logo-item" class="project-showcase" style="background-color: #FAF8FA;">
+                    <div class="media">
                     <div class="media-left">
                         <a href="img/RLE/RuinenLust_Expeditions_Cover_Photo.png" target="_blank">
                         <img class="media-object responsive-img" src="img/RLE/RuinenLust_Expeditions_Cover_Photo.png" alt="Description of image">
@@ -469,177 +470,124 @@
 
         <!-- About Ara Start -->
         <div id="about">
-
-            <div class="container">
-                <!-- Section Title Start -->
-
-                 <div class="modal-body" style="padding: 0px 60px; margin-top: 0;">
+            <div class="container about-section-shell">
+                <div class="modal-body about-modal-body">
                     <div class="row">
                         <div class="col-md-12 col-xs-12 reset-padding post-title">
-
-                <div class="section--title">
-                    <img><h2><strong>About me</strong></h2>
-                </div>
-                <!-- Section Title End -->
-                
-                <div class="row" style="margin-left: 15px; margin-right: 15px;">
-                    <div class="col-md-6">
-                        <h3>
-                        <!-- Avatar Start 
-                            <div class="logo--img">
-                                <img src="img/logo.png" class="img-responsive" alt="">
+                            <div class="section--title">
+                                <img><h2><strong>About me</strong></h2>
                             </div>
-                            
-                            <div class="logo--content" id="logo--content">
-                         Avatar End -->
-                        Hi, I'm Tracy.</h3>
 
-                        <div class="whoiam">
-                            <p>I'm a UX/UI designer with a fine arts background.
-I design digital products end to end: research, wireframes, prototypes and high fidelity UI, with a strong focus on usability and visual clarity. My background in fine arts (BFA, Painting and Drawing) gives me an edge; a trained eye for composition, color theory and visual hierarchy that makes interfaces usable and genuinely engaging.
-</p>
-                            <p>My process centers on understanding the user first, then designing solutions that are both functional and visually intentional. I'm comfortable owning a project from low fidelity to polished, interactive prototypes and I pay close attention to detail, a habit built from years of fine art practice, where precision and craft aren't optional.
-</p>
-                            <p>As a multidisciplinary designer with a focus on visual storytelling and a strong foundation in drawing, painting and user empathy.
-                                 I blend artistry with strategy to create impactful, user centered designs. I thrive at the intersection of art and usability.</p>
-                            <p>Tools I love: <strong>Figma, Adobe Creative Suite, and a well worn sketchbook.</strong>
-                                I'm currently seeking UX/UI design roles and internships where I can bring both strategic thinking and strong visual craft.
-                                If you’re crafting something meaningful and need a designer who leads with intention and craft, let’s connect via email or linkedin.
-                                </p>
-    
-                        </div>
-                        
-                        <a href="https://www.linkedin.com/in/tracy-ann-jacot-5b7837187/" class="btn btn--primary" id="btn_link" target="_blank" style="color: #fff">LINKEDIN</a>
-                    </div>
-                    
-                    <div class="col-md-6">
+                            <div class="row about-layout">
+                                <div class="col-md-6">
+                                    <h3>Hi, I'm Tracy.</h3>
 
-                        <h3>EXPERT IN</h3>
+                                    <div class="whoiam">
+                                        <p>I'm a UX/UI designer with a fine arts background. I design digital products end to end: research, wireframes, prototypes and high fidelity UI, with a strong focus on usability and visual clarity. My background in fine arts (BFA, Painting and Drawing) gives me an edge; a trained eye for composition, color theory and visual hierarchy that makes interfaces usable and genuinely engaging.</p>
+                                        <p>My process centers on understanding the user first, then designing solutions that are both functional and visually intentional. I'm comfortable owning a project from low fidelity to polished, interactive prototypes and I pay close attention to detail, a habit built from years of fine art practice, where precision and craft aren't optional.</p>
+                                        <p>As a multidisciplinary designer with a focus on visual storytelling and a strong foundation in drawing, painting and user empathy. I blend artistry with strategy to create impactful, user centered designs. I thrive at the intersection of art and usability.</p>
+                                        <p>Tools I love: <strong>Figma, Adobe Creative Suite, and a well worn sketchbook.</strong> I'm currently seeking UX/UI design roles and internships where I can bring both strategic thinking and strong visual craft. If you’re crafting something meaningful and need a designer who leads with intention and craft, let’s connect via email or linkedin.</p>
+                                    </div>
 
-                        <p>Figma, Adobe Creative Suite (Illustrator, Photoshop, InDesign), UI/UX Design, Visual Branding, Illustration, Character Design, Digital Prototyping, Color Theory, Photography, Photo Editing, Storytelling through Design.</p>
-                        
-                        <!-- About Progrees Items Start -->
-                        <div class="about--progress-items">
-                            <!-- About Progrees Bar Start -->
-                            <h4>UX & UI Design</h4>
-                            
-                            <div class="progress">
-                                <div class="progress-bar" data-progress="300"><span>100%</span></div>
-                            </div>
-                            <!-- About Progrees Bar End -->
-                            <!-- About Progrees Bar Start -->
-                            <h4>Visual Design</h4>
-                            
-                            <div class="progress">
-                                <div class="progress-bar" data-progress="100"><span>100%</span></div>
-                            </div>
-                            <!-- About Progrees Bar End -->           
-                            <!-- About Progrees Bar Start -->
-                            <h4>Illustration</h4>
-                            
-                            <div class="progress">
-                                <div class="progress-bar" data-progress="100"><span>100%</span></div>
-                            </div>
-                            <!-- About Progrees Bar End -->    
+                                    <a href="https://www.linkedin.com/in/tracy-ann-jacot-5b7837187/" class="btn btn--primary" id="btn_link" target="_blank" style="color: #fff">LINKEDIN</a>
+                                </div>
 
-                            <!-- About Progrees Bar Start -->
-                            <h4>HTML5, CSS3</h4>
-                            <div class="progress">
-                                <div class="progress-bar" data-progress="100"><span>30%</span></div>
-                            </div>
-                            <!-- About Progrees Bar End -->
-                        
-                        </div>
-                        <!-- About Progrees Items End -->
-                    </div>
-                </div>
-                
-                <!-- About Info Start -->
-                <div class="about--info">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="about--info-wrapper">
-                                <h3>EDUCATION</h3>
-                                <!-- About Info Item Start -->
-                                <div class="about--info-item">
-                                    <div class="row reset-gutter">
-                                        <div class="col-xs-4">
-                                            <p>2026 - Expected 2027</p>
+                                <div class="col-md-6">
+                                    <h3>EXPERT IN</h3>
+                                    <p>Figma, Adobe Creative Suite (Illustrator, Photoshop, InDesign), UI/UX Design, Visual Branding, Illustration, Character Design, Digital Prototyping, Color Theory, Photography, Photo Editing, Storytelling through Design.</p>
+
+                                    <div class="about--progress-items">
+                                        <h4>UX & UI Design</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar" data-progress="300"><span>100%</span></div>
                                         </div>
-                                        <div class="col-xs-8 about--info-border">
-                                            <h4>Master of Science in Digital Design (M.S.D.D.)</h4>
-                                            <p>New Jersey Institute of Technology (NJIT), New Jersey, United States</p>
+
+                                        <h4>Visual Design</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar" data-progress="100"><span>100%</span></div>
+                                        </div>
+
+                                        <h4>Illustration</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar" data-progress="100"><span>100%</span></div>
+                                        </div>
+
+                                        <h4>HTML5, CSS3</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar" data-progress="100"><span>30%</span></div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- About Info Item End -->
-                                <!-- About Info Item Start -->
-                                <div class="about--info-item">
-                                    <div class="row reset-gutter">
-                                        <div class="col-xs-4">
-                                            <p>2015 - 2019</p>
-                                        </div>
-                                        <div class="col-xs-8 about--info-border">
-                                            <h4>Bachelor of Fine Arts (B.F.A.)</h4>
-                                            <p>New Jersey City University, New Jersey, United States</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- About Info Item End -->
-                                <h3>CERTIFICATIONS</h3>
-                                <!-- About Info Item Start -->
-                                <div class="about--info-item">
-                                    <div class="row reset-gutter">
-                                        <div class="col-xs-4">
-                                            <p>2023-2025</p>
-                                        </div>     
-                                        <div class="col-xs-8 about--info-border">
-                                            <p>Google Ux Design
-                                            <br>UX Strategy Fundamentals
-                                            <br>UX Design Essentials - Adobe XD
-                                            <br>Graphic Design Masterclass
-                                            <br></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- About Info Item End -->                                
                             </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="about--info-wrapper">
-                                <h3>EXPERIENCE</h3>
 
-                                <!-- About Info Item Start -->
-                                <div class="about--info-item">
-                                    <div class="row reset-gutter">
-                                        <div class="col-xs-4">
-                                            <p>2023 - Present</p>
+                            <div class="about--info">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="about--info-wrapper">
+                                            <h3>EDUCATION</h3>
+
+                                            <div class="about--info-item">
+                                                <div class="row reset-gutter">
+                                                    <div class="col-xs-4">
+                                                        <p>2026 - Expected 2027</p>
+                                                    </div>
+                                                    <div class="col-xs-8 about--info-border">
+                                                        <h4>Master of Science in Digital Design (M.S.D.D.)</h4>
+                                                        <p>New Jersey Institute of Technology (NJIT), New Jersey, United States</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="about--info-item">
+                                                <div class="row reset-gutter">
+                                                    <div class="col-xs-4">
+                                                        <p>2015 - 2019</p>
+                                                    </div>
+                                                    <div class="col-xs-8 about--info-border">
+                                                        <h4>Bachelor of Fine Arts (B.F.A.)</h4>
+                                                        <p>New Jersey City University, New Jersey, United States</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h3>CERTIFICATIONS</h3>
+
+                                            <div class="about--info-item">
+                                                <div class="row reset-gutter">
+                                                    <div class="col-xs-4">
+                                                        <p>2023-2025</p>
+                                                    </div>
+                                                    <div class="col-xs-8 about--info-border">
+                                                        <p>Google Ux Design<br>UX Strategy Fundamentals<br>UX Design Essentials - Adobe XD<br>Graphic Design Masterclass<br></p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        
-                                        <div class="col-xs-8 about--info-border">
-                                            <h4>UX Designer, Freelancer </h4>
+                                    </div>
 
-                                            <p>Design infographics, dashboards and interactive prototypes that simplify data visualization and improve clarity for digital platforms.
-                                            <br>Produce high fidelity visuals and promotional assets optimized for web and mobile, ensuring consistent visual style across platforms.
-                                            <br>Apply typography, composition and branding principles to strengthen visual hierarchy and user engagement.
-                                            </p>
+                                    <div class="col-md-6">
+                                        <div class="about--info-wrapper">
+                                            <h3>EXPERIENCE</h3>
+
+                                            <div class="about--info-item">
+                                                <div class="row reset-gutter">
+                                                    <div class="col-xs-4">
+                                                        <p>2023 - Present</p>
+                                                    </div>
+                                                    <div class="col-xs-8 about--info-border">
+                                                        <h4>UX Designer, Freelancer</h4>
+                                                        <p>Design infographics, dashboards and interactive prototypes that simplify data visualization and improve clarity for digital platforms.<br>Produce high fidelity visuals and promotional assets optimized for web and mobile, ensuring consistent visual style across platforms.<br>Apply typography, composition and branding principles to strengthen visual hierarchy and user engagement.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- About Info Item End -->  
-
-                                <!-- About Info Item Start -->
-                              
-                                </div>
-                                <!-- About Info Item End -->  
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- About Info End -->
             </div>
-        </div></div></div>
         </div>
         <!-- About Area End -->
 
@@ -748,7 +696,20 @@ I design digital products end to end: research, wireframes, prototypes and high 
 
     <!-- ==== Txttype Script ==== -->
     <script src="js/txttype.js"></script>
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('#headerNav .nav a').forEach(function (link) {
+                link.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('load', function () {
+            document.querySelectorAll('#headerNav .nav a').forEach(function (link) {
+                link.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
