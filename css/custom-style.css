@@ -111,10 +111,11 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
 
 /* Responsive image for desktop and mobile */
 .responsive-img {
-    width: auto;
-    height: 200%;
-    max-width: 70vh;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
+    display: block;
 }
 
 .media-body p.project-type {
@@ -152,23 +153,54 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
 .banner--item > .container {
   position: relative;
   z-index: 2;
+  padding-left: 3%;
+  padding-right: 3%;
+  box-sizing: border-box;
+}
+
+.banner--item .vc--parent {
+  padding-left: 3%;
+  padding-right: 3%;
+  box-sizing: border-box;
 }
 
 .banner--content {
   text-shadow: 0 10px 30px rgba(0,0,0,0.22);
 }
 
+/* Ensure slogan and content are visible and properly sized across
+   breakpoints. This overrides the earlier absolute positioning that
+   pushed the slogan off-screen. custom-style.css is loaded after
+   style.css so no !important is necessary. */
+#banner-slogan {
+  position: relative;
+  transform: none;
+  top: auto;
+  left: auto;
+  width: 100%;
+  box-sizing: border-box;
+  color: #faf7f7;
+}
+
+.banner--content {
+  width: 100%;
+  max-width: 100%;
+  color: #faf7f7;
+}
+
 .banner--content h2 {
-  font-size: 3rem;
-  line-height: 1.02;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.05;
   letter-spacing: 0.01em;
   font-weight: 700;
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .banner--content p {
   margin-top: 1.4rem;
   color: rgba(255,255,255,0.92);
-  font-size: 1.8rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.45rem);
   line-height: 1.9;
   max-width: 720px;
   margin-left: auto;
@@ -238,6 +270,10 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
   width: 100%;
 }
 
+#gallery .gallery-grid-shell [data-cat] {
+  padding: clamp(2rem, 4vw, 4rem) 3% !important;
+}
+
 .project-showcase {
   width: 100%;
   margin: 0;
@@ -273,6 +309,63 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
 
 .project-showcase .media-body {
   padding-left: clamp(1rem, 2vw, 3rem);
+}
+
+#gallery .gallery-grid-shell {
+  width: 100%;
+  padding: 0 3%;
+  box-sizing: border-box;
+}
+
+#gallery .gallery-grid-shell [data-cat] {
+  padding: clamp(2rem, 4vw, 4rem) 3% !important;
+  box-sizing: border-box;
+}
+
+#gallery .gallery-grid-shell .project-showcase .media-left,
+#gallery .gallery-grid-shell .project-showcase .media-body {
+  flex: 1 1 45%;
+  max-width: 45%;
+  min-width: 280px;
+}
+
+#gallery .gallery-grid-shell .project-showcase .media-left {
+  width: 100%;
+}
+
+#gallery .gallery-grid-shell .project-showcase .media-left a {
+  width: 100%;
+}
+
+#about .container.about-section-shell {
+  padding-left: 3% !important;
+  padding-right: 3% !important;
+}
+
+#about .about-layout {
+  gap: 2.4rem;
+}
+
+#about .about-layout > .col-md-6 {
+  padding: 2.4rem;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(233,233,233,0.8);
+  margin-bottom: 24px;
+  border-radius: 16px;
+}
+
+#about .about-layout > .col-md-6 h3 {
+  margin-top: 0;
+}
+
+#about .about--info-wrapper {
+  border-radius: 16px;
+}
+
+#services > .container {
+  padding-left: 3%;
+  padding-right: 3%;
+  box-sizing: border-box;
 }
 
 [data-cat] .media {
@@ -335,9 +428,15 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
   }
 
 @media (max-width: 991px) {
+  #gallery .gallery-grid-shell {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
   .media {
     flex-direction: column;
-    padding: 0 18px !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .media-left {
     max-width: 100%;
@@ -347,6 +446,7 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
   .media-body {
     max-width: 100%;
     padding-left: 0;
+    width: 100%;
   }
   .media-body p {
     font-size: 1.15rem !important;
@@ -359,35 +459,65 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
   }
 }
 
-/* Services section spacing and alignment for mobile */
-#services .row.row-eq-height {
-  flex-direction: column !important;
-  display: flex !important;
-  gap: 32px !important;
-  align-items: stretch !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+@media (max-width: 768px) {
+  #gallery .gallery-grid-shell [data-cat] {
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+    box-sizing: border-box;
+  }
+  .media-left a {
+    border-radius: 16px;
+  }
+  .media-object.responsive-img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .media-body {
+    min-height: 0 !important;
+  }
+  #services > .container {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  #about .container.about-section-shell {
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+  }
 }
-#services .service--item {
-  width: 100% !important;
-  margin-left: 0 !important;
-  margin-bottom: 0 !important;
-  padding: 24px 0 0 0 !important;
-  text-align: left !important;
+
+/* Services section spacing and alignment (no !important) */
+/* Use a higher-specificity selector to override Bootstrap's .row negative margins. */
+#services > .container > .row.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: stretch;
+  margin-left: 0;
+  margin-right: 0;
 }
-#services .service--content h2 {
-  font-size: 1.5rem !important;
-  margin-bottom: 10px !important;
-  margin-top: 0 !important;
-}
-#services .service--content p {
-  font-size: 1.5rem !important;
-  line-height: 1.7 !important;
-  margin-bottom: 0 !important;
-}
-#services {
-  padding-left: 18px !important;
-  padding-right: 18px !important;
+
+/* Mobile stacking for service items */
+@media (max-width: 767px) {
+  #services > .container > .row.row-eq-height {
+    flex-direction: column;
+  }
+  #services > .container .service--item {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 24px 0 0 0;
+    text-align: left;
+  }
+  #services > .container .service--content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  #services > .container .service--content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
 }
 
 /* Gallery Items Equal Height */
@@ -414,7 +544,7 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
     @media (max-width: 767px) {
       .media {
         flex-direction: column !important;
-        padding: 0 18px !important;
+        padding: 0 3% !important;
         align-items: center !important;
       }
       .media-left {
@@ -423,8 +553,8 @@ WRITE YOUR OWN CUSTOM CSS STYLES HERE.
         margin-bottom: 24px !important;
       }
       .media-object.responsive-img {
-        width: 95vw !important;
-        max-width: 400px !important;
+        width: 100% !important;
+        max-width: 100% !important;
         height: auto !important;
         display: block;
         margin: 0 auto;
@@ -516,15 +646,53 @@ img {
   .banner--item {
     min-height: 380px !important;
   }
-  .banner--content h2 {
-    font-size: 1.8rem !important;
+  #banner-slogan {
+    position: static !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+  }
+  .banner--content {
+    padding: 1.5rem 1rem 2rem !important;
+    width: auto !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+  .banner--content h2,
+  .banner--content h2 a {
+    font-size: clamp(1.4rem, 7vw, 1.9rem) !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+  }
+  .banner--content p {
+    font-size: clamp(0.85rem, 4.5vw, 1rem) !important;
+    line-height: 1.6 !important;
+    margin-top: 1rem !important;
+    padding: 0 10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner--content h2,
+  .banner--content h2 a {
+    font-size: clamp(1.4rem, 7.5vw, 2rem) !important;
+    line-height: 1.2 !important;
+  }
+  .banner--content p {
+    font-size: clamp(0.9rem, 4.5vw, 1rem) !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner--content h2,
+  .banner--content h2 a {
+    font-size: clamp(1.1rem, 8.5vw, 1.6rem) !important;
     line-height: 1.25 !important;
   }
   .banner--content p {
-    font-size: 1.05rem !important;
-    line-height: 1.6 !important;
-    margin-top: 1rem !important;
-    padding: 0 10px;
+    font-size: clamp(0.8rem, 5vw, 0.95rem) !important;
   }
 }
 
@@ -533,6 +701,26 @@ img {
 @media (max-width: 767px) {
   #services .service--item {
     margin-left: 0 !important;
+  }
+  #services {
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+  }
+
+  /* Reset inline/full-bleed hacks previously set in markup.
+     Use CSS to control full-bleed background while keeping the
+     container inset at 3% for content. */
+  #services {
+    font-weight: 300;
+    color: #dddddd;
+    padding: 40px 0;
+    width: 100%;
+    position: relative;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
   }
 }
 

@@ -49,9 +49,9 @@ Every page must use the same top navigation order and labels:
 - Reuse a shared nav partial, component, or template so all pages stay in sync.
 - Keep item labels and order identical across the site.
 
-## 3. Use 10% edge padding for the main navigation
+## 3. Use 5% edge padding for the main navigation
 
-The navigation container should align with a 10% inset from the left and right edges of the viewport.
+The navigation container should align with a 5% inset from the left and right edges of the viewport.
 
 ```css
 .nav {
@@ -59,20 +59,20 @@ The navigation container should align with a 10% inset from the left and right e
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   box-sizing: border-box;
 }
 ```
 
 - Do not use a fixed-width wrapper with `max-width: XXXpx; margin: 0 auto;` for the nav if the goal is proportional spacing from the viewport edge.
-- Prefer padding-based inset rules or `10vw` equivalents.
+- Prefer padding-based inset rules or `5vw` equivalents.
 
-## 4. Apply the same 10% padding pattern to project sections and the About section
+## 4. Apply the same 5% padding pattern to project sections and the About section
 
 For each project section and the About section:
 
-- Keep content aligned with a 10% inset from the relevant viewport edge.
+- Keep content aligned with a 5% inset from the relevant viewport edge.
 - Use a flex or grid layout so the image and text share the remaining width proportionally.
 - Avoid fixed-width columns.
 
@@ -83,8 +83,8 @@ For each project section and the About section:
   justify-content: space-between;
   gap: 5%;
   width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   box-sizing: border-box;
 }
 
@@ -138,7 +138,7 @@ Before accepting or suggesting CSS, verify the following:
 
 - [ ] No `px` is used for width, height, margin, padding, font-size, or positional layout values except for 1px hairlines.
 - [ ] The nav markup is shared and consistent across all pages.
-- [ ] Nav padding uses a proportional inset such as `10%` or `10vw`.
-- [ ] Project sections and the About section follow the same 10%/10% edge alignment rule.
+- [ ] Nav padding uses a proportional inset such as `5%` or `5vw`.
+- [ ] Project sections and the About section follow the same 5%/5% edge alignment rule.
 - [ ] Images use fluid sizing patterns instead of fixed pixel dimensions.
 - [ ] Layouts are responsive and reflow correctly at narrow, medium, and wide viewports.

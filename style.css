@@ -153,7 +153,7 @@ body {
 .vc--child {
     text-align: center;
     margin: auto;
-    padding: 15px;
+    padding: 3%;
     position: absolute;
     width: 100%;
     top: 50%;
@@ -748,8 +748,8 @@ body.scrolled .logo--content p {
 
 .header--navbar .container.nav-shell {
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 3%;
+    padding-right: 3%;
     box-sizing: border-box;
 }
 
@@ -2394,8 +2394,15 @@ body.scrolled #backToTop {
 }
 
 .vc--child {
-    display: table-cell;
-    vertical-align: middle;
+    /* Use flex layout inside the child so content can be centered
+       and remain responsive across breakpoints. Keeping this change
+       scoped to the child avoids modifying .vc--parent (table).
+    */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .vc--child-bottom {
