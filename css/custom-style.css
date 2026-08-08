@@ -7,6 +7,17 @@
   box-sizing: border-box;
 }
 
+/* Force 3% left/right padding for the project page header nav container
+   so the nav is tighter while the rest of the page keeps wider insets. */
+body.project-page nav.header--navbar > .container,
+body.project-page nav.header--navbar > .container.nav-shell,
+body.project-page .header--navbar > .container,
+body.project-page .header--navbar > .container.nav-shell {
+  padding-left: 3% !important;
+  padding-right: 3% !important;
+  box-sizing: border-box;
+}
+
 .project-page .modal-body {
   padding: 80px 0 40px;
   margin-top: 0;
