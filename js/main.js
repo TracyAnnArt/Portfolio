@@ -503,8 +503,6 @@ WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SA
         $aboutProgressItems.find(".progress-bar").each(function () {
             var $t = $(this);
             
-            $t.css('width', 0);
-            
             $t.waypoint(function () {
                 $t.css('width', $t.data('progress') + '%');
             }, {
