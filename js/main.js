@@ -468,7 +468,8 @@ WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SA
         .on('load', galleryFiltering)
         .on('load', postsFiltering)
         .on('resize', postsResizeFilter)
-        .on('load resize', aboutProgressBars)
-        .on('load', hidePreloader);
+        .on('load resize', aboutProgressBars);
+
+    $(hidePreloader);
 
 })(jQuery);
