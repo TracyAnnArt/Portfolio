@@ -516,7 +516,35 @@ WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SA
         Hide preloader
     ------------------------------------------- */
     var hidePreloader = function () {
-        $('#preloader').fadeOut('slow');
+        var $preloader = $('#preloader');
+
+        if (!$preloader.length) {
+            return;
+        }
+
+        var images = Array.prototype.slice.call(document.images);
+        var imageLoads = images.map(function (image) {
+            return image.decode().catch(function (error) {
+                console.warn('Portfolio image could not be decoded before reveal:', image.currentSrc || image.src, error);
+            });
+        });
+        var videoLoads = Array.prototype.slice.call(document.querySelectorAll('video')).map(function (video) {
+            if (video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA || video.error) {
+                return Promise.resolve();
+            }
+
+            return new Promise(function (resolve) {
+                video.addEventListener('canplay', resolve, { once: true });
+                video.addEventListener('error', function () {
+                    console.warn('Portfolio video could not load before reveal:', video.currentSrc || video.src, video.error);
+                    resolve();
+                }, { once: true });
+            });
+        });
+
+        Promise.all(imageLoads.concat(videoLoads)).then(function () {
+            $preloader.fadeOut('slow');
+        });
     };
     
     /* -------------------------------------------
@@ -530,6 +558,10 @@ WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SA
         .on('resize', postsResizeFilter)
         .on('load resize', aboutProgressBars);
 
-    $(hidePreloader);
+    if (document.readyState === 'complete') {
+        hidePreloader();
+    } else {
+        $wn.one('load', hidePreloader);
+    }
 
 })(jQuery);
