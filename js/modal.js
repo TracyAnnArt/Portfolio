@@ -1,8 +1,8 @@
 // Get elements
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("modalImage");
-const captionText = document.getElementById("caption");
-const closeBtn = document.getElementsByClassName("close")[0];
+const modal = document.querySelector(".modal");
+const modalImg = modal.querySelector(".modal-content");
+const captionText = modal.querySelector(".caption");
+const closeBtn = modal.querySelector(".close");
 
 // Get all images with the class "modal-trigger"
 const images = document.querySelectorAll(".modal-trigger");
@@ -12,7 +12,8 @@ images.forEach(img => {
   img.addEventListener("click", function () {
     modal.style.display = "block";
     modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+    modalImg.alt = this.alt;
+    captionText.textContent = this.alt;
     modalImg.classList.remove("zoomed"); // Reset zoom if previously applied
   });
 });
